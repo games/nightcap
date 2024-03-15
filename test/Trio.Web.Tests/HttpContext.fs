@@ -2,6 +2,7 @@ module Trio.Web.Tests.HttpContext
 
 open Xunit
 open System.Net
+open Swensen.Unquote
 open Microsoft.AspNetCore.Http
 open Trio.Web.HttpContext
 
@@ -21,7 +22,7 @@ let httpContext (headers: (string * string) list) (ipAddress: string) =
 [<InlineData("abc, def, 127.0.0.1", "127.0.0.1")>]
 let ``Parse IP from IP list string should pick the first IP`` (addresses: string) (expected: string) =
     let first = firstIpAddress addresses
-    Assert.Equal(Some(IPAddress.Parse expected), first)
+    Some(IPAddress.Parse expected) =! first
 
 [<Theory>]
 [<InlineData(null)>]
@@ -30,7 +31,7 @@ let ``Parse IP from IP list string should pick the first IP`` (addresses: string
 [<InlineData("abc, aaa, ddd")>]
 let ``Parse IP from IP list string should return None if there is not valid IP`` (addresses: string) =
     let result = firstIpAddress addresses
-    Assert.Equal(None, result)
+    None =! result
 
 [<Theory>]
 [<InlineData("192.168.35.4, 192.168.10.10, 172.0.01", "CF-Connecting-IP", "222.127.130.20", "192.168.35.4")>]
@@ -46,4 +47,4 @@ let ``Should be able to extract from HTTP Context``
     let ctx = httpContext [ headerName, addresses ] remoteIp
     let ip = remoteIpAddress ctx
 
-    Assert.Equal((IPAddress.Parse expected), ip)
+    IPAddress.Parse expected =! ip

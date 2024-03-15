@@ -5,3 +5,4 @@
 src/*/nupkg
 bin
 obj
+*.DotSettings.user

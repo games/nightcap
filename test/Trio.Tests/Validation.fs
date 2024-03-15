@@ -1,6 +1,7 @@
 module Trio.Tests
 
 open Xunit
+open Swensen.Unquote
 open Trio.Validation
 
 
@@ -18,8 +19,7 @@ open Trio.Validation
 [<InlineData("2016-08-12 17:03:01.944", false)>]
 [<InlineData("jpaidfy071208301zn()&%%*)^%12", false)>]
 [<InlineData("jpAidfy071208301zn()&%%*)^%12", true)>]
-let ``Valid strong password should works`` (password: string, isStrong: bool) =
-    Assert.Equal(isStrong, isStrongPassword password)
+let ``Valid strong password should works`` (password: string, isStrong: bool) = isStrong =! isStrongPassword password
 
 
 [<Theory>]
@@ -39,8 +39,7 @@ let ``Valid strong password should works`` (password: string, isStrong: bool) =
 [<InlineData("a_b", false)>]
 [<InlineData("a/b", false)>]
 [<InlineData("a-b", false)>]
-let ``Valid is alphanumeric should works`` (str: string, isTrue: bool) =
-    Assert.Equal(isTrue, isAlphanumeric str)
+let ``Valid is alphanumeric should works`` (str: string, isTrue: bool) = isTrue =! isAlphanumeric str
 
 
 [<Theory>]
@@ -59,13 +58,12 @@ let ``Valid is alphanumeric should works`` (str: string, isTrue: bool) =
 [<InlineData("abc-1", true)>]
 [<InlineData("Abc-1", true)>]
 [<InlineData("ABC-1", true)>]
-let ``Valid if string is URL safely should works`` (str: string, isTrue: bool) = Assert.Equal(isTrue, isUrlSafely str)
+let ``Valid if string is URL safely should works`` (str: string, isTrue: bool) = isTrue =! isUrlSafely str
 
 
 [<Fact>]
 let ``Valid if amount is none or positive should works`` () =
-    let test (amount: decimal option) (isTrue: bool) =
-        Assert.Equal(isTrue, isNoneOrPositive amount)
+    let test (amount: decimal option) (isTrue: bool) = isTrue =! isNoneOrPositive amount
 
     test None true
     test (Some 0.0001m) true
@@ -86,13 +84,11 @@ let ``Valid if amount is none or positive should works`` () =
 [<InlineData("abc", 4, true)>]
 [<InlineData(null, 0, false)>]
 [<InlineData(null, 4, false)>]
-let ``Valid if is max length should works`` (str: string, max: int, isTrue: bool) =
-    Assert.Equal(isTrue, isMaxLength max str)
+let ``Valid if is max length should works`` (str: string, max: int, isTrue: bool) = isTrue =! isMaxLength max str
 
 [<Fact>]
 let ``Valid if maybe is max length should works`` () =
-    let test (str: string option) max (isTrue: bool) =
-        Assert.Equal(isTrue, maybeMaxLength max str)
+    let test (str: string option) max (isTrue: bool) = isTrue =! maybeMaxLength max str
 
     test None 0 true
     test (Some null) 0 false
