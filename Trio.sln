@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Trio", "src\Trio\Trio.fsproj", "{1EE6B519-77A7-4EE0-B477-94637CC4D6A3}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Nightcap", "src\Nightcap\Nightcap.fsproj", "{1EE6B519-77A7-4EE0-B477-94637CC4D6A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D94D6A84-4237-46FD-BBD8-C95FD31B23A1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Trio.Web", "src\Trio.Web\Trio.Web.fsproj", "{E64454DB-AE36-45CB-A7A6-91E9134FC79C}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Nightcap.Web", "src\Nightcap.Web\Nightcap.Web.fsproj", "{E64454DB-AE36-45CB-A7A6-91E9134FC79C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{A16473E0-3162-465B-B748-7F5F1972AFB8}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,15 +18,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionF
 		RELEASE_NOTES.md = RELEASE_NOTES.md
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Trio.Codecs", "src\Trio.Codecs\Trio.Codecs.fsproj", "{87CB2800-EB01-416F-81DB-33CD619D039A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Nightcap.Codecs", "src\Nightcap.Codecs\Nightcap.Codecs.fsproj", "{87CB2800-EB01-416F-81DB-33CD619D039A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Trio.Crypto", "src\Trio.Crypto\Trio.Crypto.fsproj", "{F039EABB-79FD-4D0E-9C54-4AEF57FD3437}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Nightcap.Crypto", "src\Nightcap.Crypto\Nightcap.Crypto.fsproj", "{F039EABB-79FD-4D0E-9C54-4AEF57FD3437}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4B9913F8-01E0-4A52-9CCF-F4F1E1CA7F0E}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Trio.Web.Tests", "test\Trio.Web.Tests\Trio.Web.Tests.fsproj", "{C1B16C11-4368-416E-8A26-43FD83898155}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Nightcap.Web.Tests", "test\Nightcap.Web.Tests\Nightcap.Web.Tests.fsproj", "{C1B16C11-4368-416E-8A26-43FD83898155}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Trio.Tests", "test\Trio.Tests\Trio.Tests.fsproj", "{C51CD3A4-8AA1-4E4B-A50B-BE27DB77FD65}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Nightcap.Tests", "test\Nightcap.Tests\Nightcap.Tests.fsproj", "{C51CD3A4-8AA1-4E4B-A50B-BE27DB77FD65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

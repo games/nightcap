@@ -1,10 +1,10 @@
-module Trio.Web.Tests.HttpContext
+module Nightcap.Web.Tests.HttpContext
 
 open Xunit
 open System.Net
 open Swensen.Unquote
 open Microsoft.AspNetCore.Http
-open Trio.Web.HttpContext
+open Nightcap.Web.HttpContext
 
 
 let httpContext (headers: (string * string) list) (ipAddress: string) =

@@ -1,4 +1,4 @@
-module Trio.Crypto.Base58
+module Nightcap.Crypto.Base58
 
 
 open System

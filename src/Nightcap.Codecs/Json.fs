@@ -1,4 +1,4 @@
-﻿module Trio.Codecs.Json
+﻿module Nightcap.Codecs.Json
 
 open System.IO
 open System.Text.Json

@@ -1,4 +1,4 @@
-module Trio.RandomNumber
+module Nightcap.RandomNumber
 
 open System
 open System.Security.Cryptography

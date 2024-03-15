@@ -1,4 +1,4 @@
-module Trio.Validation
+module Nightcap.Validation
 
 
 open System

@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <RootNamespace>Trio.Crypto</RootNamespace>
-        <PackageId>Trio.Crypto</PackageId>
+        <RootNamespace>Nightcap.Crypto</RootNamespace>
+        <PackageId>Nightcap.Crypto</PackageId>
     </PropertyGroup>
 
     <ItemGroup>

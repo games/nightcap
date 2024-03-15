@@ -1,4 +1,4 @@
-module Trio.Crypto.Encrypting
+module Nightcap.Crypto.Encrypting
 
 open System.IO
 open System.Security.Cryptography

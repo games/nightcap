@@ -1,4 +1,4 @@
-module Trio.Web.Uri
+module Nightcap.Web.Uri
 
 
 open System

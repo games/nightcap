@@ -1,4 +1,4 @@
-﻿namespace Trio
+﻿namespace Nightcap
 
 [<AutoOpen>]
 module Prelude =

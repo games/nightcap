@@ -1,4 +1,4 @@
-module Trio.ShortGuid
+module Nightcap.ShortGuid
 
 open System
 open FSharp.UMX

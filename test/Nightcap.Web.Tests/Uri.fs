@@ -1,10 +1,10 @@
-module Trio.Web.Tests.Uri
+module Nightcap.Web.Tests.Uri
 
 
 open System
 open Xunit
 open Swensen.Unquote
-open Trio.Web
+open Nightcap.Web
 
 
 [<Fact>]

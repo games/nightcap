@@ -1,4 +1,4 @@
-﻿module Trio.Crypto.Hashing
+﻿module Nightcap.Crypto.Hashing
 
 open System
 open System.Security.Cryptography

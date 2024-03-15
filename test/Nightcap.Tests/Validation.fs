@@ -1,8 +1,8 @@
-module Trio.Tests
+module Nightcap.Tests
 
 open Xunit
 open Swensen.Unquote
-open Trio.Validation
+open Nightcap.Validation
 
 
 [<Theory>]

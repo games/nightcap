@@ -4,7 +4,7 @@
         <IsPackable>false</IsPackable>
         <GenerateProgramFile>false</GenerateProgramFile>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>Trio.Web.Tests</RootNamespace>
+        <RootNamespace>Nightcap.Web.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Trio.Web\Trio.Web.fsproj"/>
+        <ProjectReference Include="..\..\src\Nightcap.Web\Nightcap.Web.fsproj" />
     </ItemGroup>
 
 </Project>

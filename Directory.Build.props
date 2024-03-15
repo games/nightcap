@@ -13,8 +13,8 @@
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageProjectUrl>https://github.com/games/trio</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/games/trio</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/games/nightcap</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/games/nightcap</RepositoryUrl>
         <Authors>Valor</Authors>
     </PropertyGroup>
     

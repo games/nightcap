@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <RootNamespace>Trio.Web</RootNamespace>
-        <PackageId>Trio.Web</PackageId>
+        <RootNamespace>Nightcap.Web</RootNamespace>
+        <PackageId>Nightcap.Web</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,7 +21,7 @@
     </ItemGroup>
     
     <ItemGroup>
-        <ProjectReference Include="..\Trio\Trio.fsproj" />
+        <ProjectReference Include="..\Nightcap\Nightcap.fsproj" />
     </ItemGroup>
 
 </Project>

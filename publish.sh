@@ -23,10 +23,10 @@ publish () {
 if [[ -f ".env" ]]; then
 
   export "$(xargs < .env)"
-  publish "Trio"
-  publish "Trio.Codecs"
-  publish "Trio.Crypto"
-  publish "Trio.Web"
+  publish "Nightcap"
+  publish "Nightcap.Codecs"
+  publish "Nightcap.Crypto"
+  publish "Nightcap.Web"
 
 else
   # .env file template

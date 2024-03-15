@@ -1,4 +1,4 @@
-module Trio.Web.PasswordHashing
+module Nightcap.Web.PasswordHashing
 
 
 // https://github.com/dotnet/aspnetcore/blob/4963b764e3c03473022c75f13b7f82c531650001/src/Identity/Extensions.Core/src/PasswordHasher.cs
