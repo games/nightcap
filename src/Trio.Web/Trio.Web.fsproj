@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <RootNamespace>Trio.Web</RootNamespace>
+        <PackageId>Trio.Web</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Uri.fs"/>
+        <Compile Include="PasswordHashing.fs"/>
+        <Compile Include="HttpContext.fs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+        <PackageReference Include="FSharp.UMX"/>
+        <PackageReference Include="Microsoft.Extensions.Identity.Core"/>
+        <PackageReference Include="FSharp.Core"/>
+        <PackageReference Include="FSharpPlus"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\Trio\Trio.fsproj" />
+    </ItemGroup>
+
+</Project>

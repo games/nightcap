@@ -1,0 +1,20 @@
+<Project>
+    <PropertyGroup>
+        <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
+        <LangVersion>preview</LangVersion>
+        <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+        <NoWarn>FS3511</NoWarn>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+        <PackageVersion>0.0.1</PackageVersion>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.MD</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/games/trio</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/games/trio</RepositoryUrl>
+        <Authors>Valor</Authors>
+    </PropertyGroup>
+</Project>

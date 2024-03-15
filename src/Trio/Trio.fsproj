@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <RootNamespace>Trio</RootNamespace>
+        <PackageId>Trio</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Prelude.fs" />
+        <Compile Include="RandomNumber.fs" />
+        <Compile Include="Validation.fs" />
+        <Compile Include="ShortGuid.fs" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="FSharp.Core"/>
+        <PackageReference Include="FSharpPlus"/>
+        <PackageReference Include="FSharp.UMX"/>
+    </ItemGroup>
+
+</Project>
