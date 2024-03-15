@@ -8,8 +8,8 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <Version>0.0.1</Version>
-        <PackageVersion>0.0.1</PackageVersion>
+        <Version>0.0.2</Version>
+        <PackageVersion>$(Version)</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
