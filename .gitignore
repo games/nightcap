@@ -3,6 +3,7 @@
 .env
 .DS_Store
 src/*/nupkg
+test/*/TestResults
 bin
 obj
 *.DotSettings.user
