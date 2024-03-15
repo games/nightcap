@@ -8,7 +8,7 @@ open FSharpPlus
 
 
 let anyNullOrWhiteSpaces (items: string seq) =
-    Seq.exists String.IsNullOrWhiteSpace items
+    Seq.isEmpty items || Seq.exists String.IsNullOrWhiteSpace items
 
 let isNotNullOrWhiteSpace = String.IsNullOrWhiteSpace >> not
 
@@ -16,7 +16,7 @@ let isValidEmailAddress (address: string) =
     isNotNullOrWhiteSpace address && EmailAddressAttribute().IsValid(address)
 
 let isLesserThan (length: int) (str: string) =
-    isNotNullOrWhiteSpace str && str.Length <= length
+    isNotNullOrWhiteSpace str && str.Trim().Length < length
 
 let isUpper (c: char) = Char.IsUpper c
 

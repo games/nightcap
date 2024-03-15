@@ -97,3 +97,42 @@ let ``Valid if maybe is max length should works`` () =
     test (Some "abc") 1 false
     test (Some "abc") 3 true
     test (Some "abc") 4 true
+
+
+[<Fact>]
+let ``anyNullOrWhiteSpaces should works`` () =
+    anyNullOrWhiteSpaces [] =! true
+    anyNullOrWhiteSpaces [ null ] =! true
+    anyNullOrWhiteSpaces [ "" ] =! true
+    anyNullOrWhiteSpaces [ " " ] =! true
+    anyNullOrWhiteSpaces [ ""; "" ] =! true
+    anyNullOrWhiteSpaces [ " "; " " ] =! true
+    anyNullOrWhiteSpaces [ " "; "" ] =! true
+    anyNullOrWhiteSpaces [ " "; null ] =! true
+    anyNullOrWhiteSpaces [ "abc"; "" ] =! true
+    anyNullOrWhiteSpaces [ "abc"; " " ] =! true
+    anyNullOrWhiteSpaces [ "abc"; null ] =! true
+    anyNullOrWhiteSpaces [ "abc"; " dec" ] =! false
+
+[<Theory>]
+[<InlineData("abc@google.com", true)>]
+[<InlineData("abc.dec@google.com", true)>]
+[<InlineData(null, false)>]
+[<InlineData("", false)>]
+[<InlineData("  ", false)>]
+[<InlineData("abcd345", false)>]
+[<InlineData("abc@asdf", true)>]
+[<InlineData(" abc@asdf  ", true)>]
+[<InlineData("abc@asdf.dd", true)>]
+let ``isValidEmailAddress should works`` (email: string) (isTrue: bool) = isTrue =! isValidEmailAddress email
+
+[<Theory>]
+[<InlineData("", -1, false)>]
+[<InlineData("a", 0, false)>]
+[<InlineData("ab", 1, false)>]
+[<InlineData("ab", 2, false)>]
+[<InlineData(null, -100, false)>]
+[<InlineData("     ", 10, false)>]
+[<InlineData("abc", 10, true)>]
+[<InlineData("  abc   ", 4, true)>]
+let ``isLesserThan should works`` (str: string) (length: int) (isTrue: bool) = isLesserThan length str =! isTrue
