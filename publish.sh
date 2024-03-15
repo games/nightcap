@@ -16,7 +16,7 @@ publish () {
   
   files=("$nupkgDir/*.nupkg")
   nupkgFile="${files[0]}"
-  dotnet nuget push "$nupkgFile" --source https://api.nuget.org/v3/index.json --api-key "$API_KEY"
+  dotnet nuget push "$nupkgFile" --source https://api.nuget.org/v3/index.json --api-key "$API_KEY" --skip-duplicate
   
 }
 
@@ -24,9 +24,9 @@ if [[ -f ".env" ]]; then
 
   export "$(xargs < .env)"
   publish "Trio"
-#  publish "Trio.Codecs"
-#  publish "Trio.Crypto"
-#  publish "Trio.Web"
+  publish "Trio.Codecs"
+  publish "Trio.Crypto"
+  publish "Trio.Web"
 
 else
   # .env file template
