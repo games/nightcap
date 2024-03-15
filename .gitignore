@@ -2,6 +2,6 @@
 .ionide
 .env
 .DS_Store
-src/nupkg
+src/*/nupkg
 bin
 obj

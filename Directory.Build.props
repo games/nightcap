@@ -12,9 +12,17 @@
         <PackageVersion>0.0.1</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageReadmeFile>README.MD</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/games/trio</PackageProjectUrl>
         <RepositoryUrl>https://github.com/games/trio</RepositoryUrl>
         <Authors>Valor</Authors>
     </PropertyGroup>
+    
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)README.md">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+            <Link>README.md</Link>
+        </None>
+    </ItemGroup>
 </Project>

@@ -7,10 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Prelude.fs" />
-        <Compile Include="RandomNumber.fs" />
-        <Compile Include="Validation.fs" />
-        <Compile Include="ShortGuid.fs" />
+        <Compile Include="Prelude.fs"/>
+        <Compile Include="RandomNumber.fs"/>
+        <Compile Include="Validation.fs"/>
+        <Compile Include="ShortGuid.fs"/>
     </ItemGroup>
     
     <ItemGroup>
