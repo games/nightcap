@@ -1,4 +1,4 @@
-module Nightcap.Tests
+module Nightcap.Tests.Validation
 
 open Xunit
 open Swensen.Unquote

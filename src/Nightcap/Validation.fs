@@ -20,7 +20,7 @@ let isLesserThan (length: int) (str: string) =
 
 let isUpper (c: char) = Char.IsUpper c
 
-let IsLower (c: char) = Char.IsLower c
+let isLower (c: char) = Char.IsLower c
 
 let isDigit (c: char) = Char.IsDigit c
 
@@ -39,7 +39,7 @@ let isStrongPassword (password: string) =
     && not (password.All isLetterOrDigit)
     && password.Any(isDigit)
     && password.Any(isUpper)
-    && password.Any(IsLower)
+    && password.Any(isLower)
     && password.Distinct().Count() >= 5
 
 let isNotStrongPassword = isStrongPassword >> not
