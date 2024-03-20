@@ -10,6 +10,7 @@
     <ItemGroup>
         <Compile Include="Validation.fs"/>
         <Compile Include="Result.fs" />
+        <Compile Include="ShortGuid.fs" />
         <Compile Include="Program.fs"/>
     </ItemGroup>
 
