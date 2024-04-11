@@ -1,5 +1,7 @@
 ﻿namespace Nightcap
 
+open System
+
 [<AutoOpen>]
 module Prelude =
     let inline notNull x = (isNull >> not) x
@@ -9,8 +11,21 @@ module Prelude =
             failwith message
 
     let orJust = Option.defaultValue
-    
+
     let orWith = Option.defaultWith
+
+    let envVars name =
+        Environment.GetEnvironmentVariable name |> Option.ofObj
+
+    let requiredEnv name =
+        let var = envVars name
+
+        if var.IsNone then
+            failwith $"Environment variable not found: {name}"
+
+        var.Value
+
+    let envExists name = (envVars name).IsSome
 
     module Operators =
 
