@@ -1,5 +1,7 @@
 module Nightcap.Web.Tests.HttpContext
 
+open System.IO
+open System.IO.Pipelines
 open Xunit
 open System.Net
 open Swensen.Unquote
@@ -48,3 +50,13 @@ let ``Should be able to extract from HTTP Context``
     let ip = remoteIpAddress ctx
 
     IPAddress.Parse expected =! ip
+
+
+[<Fact>]
+let ``Should return all bytes from pipe reader`` () =
+    task {
+        let body = Array.init 10_000 byte
+        let reader = PipeReader.Create(new MemoryStream(body))
+        let! bytes = readBytesFromPipeReader reader
+        body =! bytes
+    }

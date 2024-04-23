@@ -1,13 +1,14 @@
 module Nightcap.Web.HttpContext
 
 open System
-open System.Collections.Generic
+open System.Buffers
 open System.IO
-open System.Linq
+open System.IO.Pipelines
 open System.Net
 open System.Net.Sockets
 open Microsoft.AspNetCore.Http
 open FSharpPlus
+open Nightcap.Seq
 
 
 
@@ -19,7 +20,23 @@ let readBodyAsString (ctx: HttpContext) =
         return! body
     }
 
-let firstOrDefault<'T when 'T: null> (it: IEnumerable<'T>) = it.FirstOrDefault() |> Option.ofObj
+
+let readBytesFromPipeReader (reader: PipeReader) =
+    task {
+        let mutable buffer = Unchecked.defaultof<ReadOnlySequence<byte>>
+        let mutable isCompleted = false
+
+        while not isCompleted do
+            let! result = reader.ReadAsync()
+            buffer <- result.Buffer
+            isCompleted <- result.IsCompleted || result.IsCanceled
+
+            if not isCompleted then
+                reader.AdvanceTo(result.Buffer.Start, result.Buffer.End)
+
+        return buffer.ToArray()
+    }
+
 
 let tryParseIpAddress (address: string) =
     match IPAddress.TryParse address with

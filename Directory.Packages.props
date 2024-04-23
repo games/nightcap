@@ -1,24 +1,25 @@
 <Project>
-    <PropertyGroup>
-        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-        <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageVersion Include="BouncyCastle.Cryptography" Version="2.3.0"/>
-        <PackageVersion Include="FSharp.Core" Version="8.0.200"/>
-        <PackageVersion Include="Giraffe" Version="6.3.0"/>
-        <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="8.0.3"/>
-        <PackageVersion Include="Oxpecker" Version="0.7.1"/>
-        <PackageVersion Include="System.Net.Http.Json" Version="8.0.0"/>
-        <PackageVersion Include="FSharp.SystemTextJson" Version="1.2.42"/>
-        <PackageVersion Include="FSharp.UMX" Version="1.1.0"/>
-        <PackageVersion Include="FSharpPlus" Version="1.6.1"/>
-        <PackageVersion Include="FsToolkit.ErrorHandling.TaskResult" Version="4.15.1"/>
-        <PackageVersion Include="FsCheck.Xunit" Version="2.16.6" />
-        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0"/>
-        <PackageVersion Include="xunit" Version="2.7.0"/>
-        <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.7" />
-        <PackageVersion Include="coverlet.collector" Version="6.0.2" />
-        <PackageVersion Include="Unquote" Version="7.0.0"/>
-    </ItemGroup>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="BouncyCastle.Cryptography" Version="2.3.0" />
+    <PackageVersion Include="FSharp.Core" Version="8.0.200" />
+    <PackageVersion Include="Giraffe" Version="6.3.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="8.0.3" />
+    <PackageVersion Include="Oxpecker" Version="0.7.1" />
+    <PackageVersion Include="System.Net.Http.Json" Version="8.0.0" />
+    <PackageVersion Include="FSharp.SystemTextJson" Version="1.2.42" />
+    <PackageVersion Include="FSharp.UMX" Version="1.1.0" />
+    <PackageVersion Include="FSharpPlus" Version="1.6.1" />
+    <PackageVersion Include="FsToolkit.ErrorHandling.TaskResult" Version="4.15.1" />
+    <PackageVersion Include="FsCheck.Xunit" Version="2.16.6" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageVersion Include="xunit" Version="2.7.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.7" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
+    <PackageVersion Include="Unquote" Version="7.0.0" />
+  </ItemGroup>
 </Project>
