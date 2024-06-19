@@ -4,8 +4,8 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="FSharp.Core" Version="8.0.300" />
     <PackageVersion Include="BouncyCastle.Cryptography" Version="2.4.0" />
-    <PackageVersion Include="FSharp.Core" Version="8.0.200" />
     <PackageVersion Include="Giraffe" Version="6.3.0" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="8.0.6" />
