@@ -1,6 +1,5 @@
 ﻿module Nightcap.Crypto.Hashing
 
-open System
 open System.Security.Cryptography
 open System.Text
 open Org.BouncyCastle.Crypto.Digests
@@ -13,5 +12,12 @@ let keccak input =
     output
 
 
-let sha256 (input: string) =
-    input |> Encoding.UTF8.GetBytes |> SHA256.HashData |> Convert.ToBase64String
+module UTF8 =
+
+
+    let sha256 (input: string) =
+        input |> Encoding.UTF8.GetBytes |> SHA256.HashData
+
+
+    let md5 (input: string) =
+        input |> Encoding.UTF8.GetBytes |> MD5.HashData
