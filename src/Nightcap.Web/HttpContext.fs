@@ -8,8 +8,6 @@ open System.Net
 open System.Net.Sockets
 open Microsoft.AspNetCore.Http
 open FSharpPlus
-open Nightcap.Seq
-
 
 
 let readBodyAsString (ctx: HttpContext) =
@@ -59,8 +57,8 @@ let firstIpAddress (addresses: string) =
 let remoteIpAddress (ctx: HttpContext) =
     let headers = ctx.Request.Headers
 
-    firstOrDefault headers["CF-Connecting-IP"]
-    <|> firstOrDefault headers["X-Real-IP"]
-    <|> firstOrDefault headers["X-Forwarded-For"]
+    Seq.tryHead headers["CF-Connecting-IP"]
+    <|> Seq.tryHead headers["X-Real-IP"]
+    <|> Seq.tryHead headers["X-Forwarded-For"]
     >>= firstIpAddress
     |> Option.defaultValue ctx.Connection.RemoteIpAddress
