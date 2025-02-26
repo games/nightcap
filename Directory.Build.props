@@ -2,13 +2,13 @@
     <PropertyGroup>
         <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
         <LangVersion>preview</LangVersion>
-        <TargetFrameworks>net8.0;.net9.0</TargetFrameworks>
+        <TargetFramework>.net9.0</TargetFramework>
         <NoWarn>FS3511</NoWarn>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
     
     <PropertyGroup>
-        <Version>0.0.6</Version>
+        <Version>0.0.7</Version>
         <PackageVersion>$(Version)</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
