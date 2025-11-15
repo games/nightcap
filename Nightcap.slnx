@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/SolutionFolder/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="publish.sh" />
+    <File Path="README.md" />
+    <File Path="RELEASE_NOTES.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Nightcap.Codecs/Nightcap.Codecs.fsproj" />
+    <Project Path="src/Nightcap.Crypto/Nightcap.Crypto.fsproj" />
+    <Project Path="src/Nightcap.Web/Nightcap.Web.fsproj" />
+    <Project Path="src/Nightcap/Nightcap.fsproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Nightcap.Tests/Nightcap.Tests.fsproj" />
+    <Project Path="test/Nightcap.Web.Tests/Nightcap.Web.Tests.fsproj" />
+  </Folder>
+</Solution>
