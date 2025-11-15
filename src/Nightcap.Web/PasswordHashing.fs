@@ -21,11 +21,13 @@ let writeNetworkByteOrder (buffer: byte[]) (offset: int) (value: uint) =
     buffer[offset + 2] <- byte (value >>> 8)
     buffer[offset + 3] <- byte (value >>> 0)
 
+
 let readNetworkByteOrder (buffer: byte[]) (offset: int) =
     (uint (buffer[offset + 0]) <<< 24)
     ||| (uint (buffer[offset + 1]) <<< 16)
     ||| (uint (buffer[offset + 2]) <<< 8)
     ||| (uint (buffer[offset + 3]))
+
 
 let hash (password: string<password>) : string<hashedPassword> =
     let saltSize = 128 / 8 // 128 bits
@@ -47,6 +49,7 @@ let hash (password: string<password>) : string<hashedPassword> =
     Buffer.BlockCopy(subKey, 0, outputBytes, 13 + saltSize, subKey.Length)
     let hashed = Convert.ToBase64String outputBytes
     %hashed
+
 
 let verifyHashedPassword (hashedPassword: string<hashedPassword>) (providedPassword: string<password>) =
     let decodedHashed = Convert.FromBase64String %hashedPassword

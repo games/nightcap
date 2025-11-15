@@ -14,8 +14,7 @@ let readBodyAsString (ctx: HttpContext) =
     task {
         let stream = ctx.Request.Body
         use reader = new StreamReader(stream)
-        let body = reader.ReadToEndAsync()
-        return! body
+        return! reader.ReadToEndAsync()
     }
 
 
@@ -45,6 +44,7 @@ let tryParseIpAddress (address: string) =
         Some ip
     | _ -> None
 
+
 let firstIpAddress (addresses: string) =
     if String.IsNullOrWhiteSpace addresses then
         None
@@ -53,6 +53,7 @@ let firstIpAddress (addresses: string) =
             addresses.Split(",", StringSplitOptions.RemoveEmptyEntries ||| StringSplitOptions.TrimEntries)
 
         ips |> Seq.tryPick tryParseIpAddress
+
 
 let remoteIpAddress (ctx: HttpContext) =
     let headers = ctx.Request.Headers
