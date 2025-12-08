@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="BouncyCastle.Cryptography" Version="2.6.2" />
-    <PackageVersion Include="FSharp.Core" Version="9.0.303" />
+    <PackageVersion Include="FSharp.Core" Version="10.0.100" />
     <PackageVersion Include="Giraffe" Version="7.0.2" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="9.0.3" />
