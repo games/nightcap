@@ -2,7 +2,7 @@
     <PropertyGroup>
         <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
         <LangVersion>preview</LangVersion>
-        <TargetFramework>.net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <NoWarn>FS3511</NoWarn>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>

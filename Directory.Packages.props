@@ -5,10 +5,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="BouncyCastle.Cryptography" Version="2.6.2" />
-    <PackageVersion Include="FSharp.Core" Version="9.0.303" />
-    <PackageVersion Include="Giraffe" Version="7.0.2" />
+    <PackageVersion Include="FSharp.Core" Version="10.0.101" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3" />
-    <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="9.0.3" />
     <PackageVersion Include="System.Net.Http.Json" Version="9.0.3" />
     <PackageVersion Include="FSharp.SystemTextJson" Version="1.4.36" />
     <PackageVersion Include="System.Text.Json" Version="9.0.3" />
@@ -17,7 +15,7 @@
     <PackageVersion Include="FsToolkit.ErrorHandling.TaskResult" Version="4.15.1" />
     <PackageVersion Include="FsCheck.Xunit" Version="2.16.6" />
     <PackageVersion Include="xunit" Version="2.9.3" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

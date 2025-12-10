@@ -15,7 +15,6 @@
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App"/>
         <PackageReference Include="FSharp.UMX"/>
-        <PackageReference Include="Microsoft.Extensions.Identity.Core"/>
         <PackageReference Include="FSharp.Core"/>
         <PackageReference Include="FSharpPlus"/>
     </ItemGroup>
