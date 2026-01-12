@@ -11,7 +11,7 @@
     <PackageVersion Include="FSharp.SystemTextJson" Version="1.4.36" />
     <PackageVersion Include="System.Text.Json" Version="9.0.3" />
     <PackageVersion Include="FSharp.UMX" Version="1.1.0" />
-    <PackageVersion Include="FSharpPlus" Version="1.8.0" />
+    <PackageVersion Include="FSharpPlus" Version="1.9.1" />
     <PackageVersion Include="FsToolkit.ErrorHandling.TaskResult" Version="4.15.1" />
     <PackageVersion Include="FsCheck.Xunit" Version="2.16.6" />
     <PackageVersion Include="xunit" Version="2.9.3" />
